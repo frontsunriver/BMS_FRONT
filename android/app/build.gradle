@@ -134,11 +134,11 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.easy_boiler"
+        applicationId "com.bms.easy.start"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 8
-        versionName "1.0.8"
+        versionCode 1
+        versionName "1.0.0"
     }
     splits {
         abi {
