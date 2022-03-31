@@ -16,3 +16,10 @@ export function minutesSinceTime(prev) {
 export function convertDateFormat(date) {
   return date.toISOString().split('T')[0];
 }
+
+export function convertTimeFormat(time) {
+  time = time.toISOString().replace("T", " ");
+  time = time.substring(0, 19);
+  var dt = moment(time).format("hh:mm a");
+  return dt.toString();
+}

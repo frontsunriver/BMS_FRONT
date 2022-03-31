@@ -23,5 +23,7 @@
     "btn_messages": "MESSAGES",
     "message_detail": "MESSAGE DETAIL",
     "view_request": "VIEW ANY REQUEST",
-    "view_any_request_detail" : "VIEW ANY REQUEST DETAIL"
+    "view_any_request_detail" : "VIEW ANY REQUEST DETAIL",
+    "access_card": "ACCESS CARD",
+    "ac_maintenance": "AC MAINTENANCE"
 }

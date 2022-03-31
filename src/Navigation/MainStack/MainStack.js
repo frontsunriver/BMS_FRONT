@@ -38,6 +38,12 @@ import Settings from '../../Screens/Settings';
 
 import MoveDetail from '../../Screens/Move_response';
 
+import AccessDashboard from '../../Screens/Access_card/dashboard';
+import AccessCardAdd from '../../Screens/Access_card/add';
+
+import AcMaintenanceDashboard from '../../Screens/Ac_maintenance/dashboard';
+import AcMaintenanceAdd from '../../Screens/Ac_maintenance/add';
+
 const HomeStackScreen = () => {
   const {t} = useTranslation();
   const {theme} = useAppTheme();
@@ -285,6 +291,46 @@ export default props => {
         }}
         name={Routes.MOVE_RESPONSE_SCREEN}
         component={MoveDetail}
+      />
+
+      <Stack.Screen
+        options={{
+          header: () => (
+          <HeaderScreen type="back" title1="ACCESS CARD"/>
+        ),
+        }}
+        name={Routes.ACCESS_CARD_DASHBOARD}
+        component={AccessDashboard}
+      />
+
+      <Stack.Screen
+        options={{
+          header: () => (
+          <HeaderScreen type="back" title1="ACCESS CARD ADD"/>
+        ),
+        }}
+        name={Routes.ACCESS_CARD_ADD}
+        component={AccessCardAdd}
+      />
+
+      <Stack.Screen
+        options={{
+          header: () => (
+          <HeaderScreen type="back" title1="AC MAINTENANCE"/>
+        ),
+        }}
+        name={Routes.AC_MAINTENANCE_DASHBOARD}
+        component={AcMaintenanceDashboard}
+      />
+
+      <Stack.Screen
+        options={{
+          header: () => (
+          <HeaderScreen type="back" title1="AC MAINTENANCE ADD"/>
+        ),
+        }}
+        name={Routes.AC_MAINTENANCE_ADD}
+        component={AcMaintenanceAdd}
       />
     </Stack.Navigator>
   );

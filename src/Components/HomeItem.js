@@ -13,6 +13,8 @@ const HomeItem = () => {
     const reportIcon = parseIconFromClassName('fas fa-pencil-alt');
     const messageIcon = parseIconFromClassName('fas fa-envelope');
     const settingIcon = parseIconFromClassName('fas fa-cogs');
+    const accessCard = parseIconFromClassName('fas fa-credit-card');
+    const acMaintenance = parseIconFromClassName('fas fa-universal-access');
     return (
         <View style={{flexDirection: 'column', flex: 1, alignItems: 'center', justifyContent: 'center'}}>
             <View style={{flexDirection: 'row', margin: 10, justifyContent: 'space-between'}}>
@@ -66,6 +68,24 @@ const HomeItem = () => {
                     <View style={{flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
                         <FontAwesome icon={settingIcon} style={{color: theme.colors.background, fontSize: 50}} />
                         <Text style={{fontSize: 15, marginTop: 5}}>SETTINGS</Text>
+                    </View>
+                </TouchableOpacity>
+            </View>
+            <View style={{flexDirection: 'row', margin: 10, justifyContent: 'space-between'}}>
+                <TouchableOpacity style={styles.touchableStyle} onPress={() => {
+                    NavigatService.navigate(Routes.ACCESS_CARD_DASHBOARD)
+                }}>
+                    <View style={{flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
+                        <FontAwesome icon={accessCard} style={{color: theme.colors.background, fontSize: 50}} />
+                        <Text style={{fontSize: 15, marginTop: 5}}>Access Card</Text>
+                    </View>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.touchableStyle} onPress={() => {
+                    NavigatService.navigate(Routes.AC_MAINTENANCE_DASHBOARD)
+                }}>
+                    <View style={{flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
+                        <FontAwesome icon={acMaintenance} style={{color: theme.colors.background, fontSize: 50}} />
+                        <Text style={{fontSize: 15, marginTop: 5}}>AC maintenance</Text>
                     </View>
                 </TouchableOpacity>
             </View>

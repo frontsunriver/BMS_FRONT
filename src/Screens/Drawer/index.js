@@ -34,6 +34,8 @@ const Content = () => {
   const reportIcon = parseIconFromClassName('fas fa-pencil-alt');
   const messageIcon = parseIconFromClassName('fas fa-envelope');
   const settingIcon = parseIconFromClassName('fas fa-cogs');
+  const accessCardIcon = parseIconFromClassName('fas fa-credit-card');
+  const acMaintenanceIcon = parseIconFromClassName('fas fa-universal-access');
 
   useEffect( async () => {
     var userInfo = JSON.parse(await AsyncStorage.getItem('USER_INFO'));
@@ -119,6 +121,22 @@ const Content = () => {
           <View style={{padding: 16, flexDirection: 'row'}}>
             <FontAwesome icon={settingIcon} style={{color: theme.colors.primary, fontSize: 15}} />
             <Text style={{color: theme.colors.primary, marginLeft: 10}}>{t('settings')}</Text>
+          </View>
+        </TouchableX>
+        <TouchableX border onPress={() => {
+          NavigationService.navigate(Routes.ACCESS_CARD_DASHBOARD)
+        }}>
+          <View style={{padding: 16, flexDirection: 'row'}}>
+            <FontAwesome icon={accessCardIcon} style={{color: theme.colors.primary, fontSize: 15}} />
+            <Text style={{color: theme.colors.primary, marginLeft: 10}}>{t('access_card')}</Text>
+          </View>
+        </TouchableX>
+        <TouchableX border onPress={() => {
+          NavigationService.navigate(Routes.AC_MAINTENANCE_DASHBOARD)
+        }}>
+          <View style={{padding: 16, flexDirection: 'row'}}>
+            <FontAwesome icon={acMaintenanceIcon} style={{color: theme.colors.primary, fontSize: 15}} />
+            <Text style={{color: theme.colors.primary, marginLeft: 10}}>{t('ac_maintenance')}</Text>
           </View>
         </TouchableX>
       </View>
